@@ -1,0 +1,10 @@
+<div class="card h-100"  >
+  <div class="card-header">
+      <h5 class="text-center">{{estadisticasTitle}}</h5>
+  </div>
+  <div class="card-body">
+      <p class="card-text"*ngIf="nroAciertos!=undefined">Aciertos: {{ nroAciertos}} 
+        &nbsp;<br>Desaciertos: {{nroErrores}} 
+        <br>Jugadas totales: {{nroAciertos+nroErrores}}&nbsp;<br><br></p>
+  </div>
+</div>

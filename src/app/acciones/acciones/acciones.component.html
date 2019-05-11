@@ -1,0 +1,21 @@
+<div class="card h-100" >
+  <div class="card-header">
+      <h5 class="text-center">{{accionTitle}}</h5>
+  </div>
+  <div class="card-body">
+    <button class="btn btn-primary" type="button" style="margin-bottom: 10px;" (click) ="comenzarjuego()">Nuevo Juego</button>
+      <div *ngIf="juegoComenzado"  class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">
+              <i class="fas fa-font"></i>
+            </span>
+          </div>
+          <input class="form-control" id="formLetra" [(ngModel)]="letraform" required type="text" [maxLength]=1 minlength="1">
+          <div class="input-group-append">
+            <button class="btn btn-primary" id="btnSendLetra" type="button" (click)=enviarYborrar() >Enviar letra!</button>
+          
+          </div>
+          
+      </div>
+  </div>
+</div>

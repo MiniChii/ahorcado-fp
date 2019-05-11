@@ -1,0 +1,42 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="padding: 20px;">
+  <div class="card">
+      <div class="card-header">
+          <h1 class="text-center">{{title}}</h1>
+      </div>
+      <div class="card-body">
+          <div class="row">
+              <div class="col col-md-3">
+                  <app-acciones 
+                     (letraJugada)="jugarLetra($event)"
+                     (nombreJugador)="comenzarJuego($event)"
+                     [juegoComenzado]="juegoComenzado"
+                  ></app-acciones>
+              </div>
+              <div class="col col-md-3">
+                  <app-estadisticas
+                  [nroAciertos]="nroAciertos"
+                  [nroErrores]="nroErrores"
+                  ></app-estadisticas>
+              </div>
+              <div class="col col-md-6">
+                 <app-ahorcado 
+                    [estadoJuego]="estadoDelJuego"
+                    [errores]="nroErrores"
+                 ></app-ahorcado>
+              </div>
+          </div>
+          <div style="padding: 0px;padding-top: 20px;">
+              <app-mensajes
+              [nombreRecibido]="nombreJugador"
+              [mensajeRecibido]="letraJugada"
+              ></app-mensajes>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!--Para los guiones, haré una tabla con 2 rows y en la 
+  row[1] tantos guiones altos (alt +238 ¯¯¯¯) como length, en la 
+  row[0] irán las letras -->
+

@@ -1,0 +1,26 @@
+<div class="card h-100">
+  <div class="card-header">
+      <h5 class="text-center">{{ahorcadosTitle}}</h5>
+  </div>
+  <div class="card-body text-center"><img>
+      <p *ngIf="!estadoJuego" class="card-text">¡Comienza un nuevo juego!</p>
+      <!--insertar imagen acá-->
+      <img  id="img-ahorcado" [src]='imgSrc' width="150px" height="150px">
+      <p>{{estadoJuego}}</p>
+
+      
+      <!-- no funciona con una tabla :C
+      <table class="table">
+        <tbody>
+          <tr>
+            <td scope="row" *ngFor="let elem of array(palabraJugada)"></td>   
+          </tr>
+          <tr>
+            <td scope="row" *ngFor="let elem of array(palabraJugada)">¯</td>
+          </tr>
+        </tbody>
+      </table>
+
+      -->
+  </div>
+</div>
